@@ -1,0 +1,154 @@
+/*  start variable */
+:root{
+    --Purple: hsl(259, 100%, 65%);
+--Light-red: hsl(0, 100%, 67%);
+
+--White: hsl(0, 0%, 100%);
+--Off-white: hsl(0, 0%, 94%);
+--Light-grey: hsl(0, 0%, 86%);
+--Smokey-grey: hsl(0, 1%, 44%);
+--Off-black: hsl(0, 0%, 8%);
+}
+/* end variable / */
+ /* Start Global Rules */
+ * {
+    -webkit-box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    box-sizing: border-box;
+  }
+  html {
+    scroll-behavior: smooth;
+   }
+  body {
+   margin: 0;
+   padding: 0;
+
+  }
+  .container {
+    padding-left: 15px;
+    padding-right: 15px;
+    margin-left: auto;
+    margin-right: auto;
+  }
+  /* Small */
+  @media (min-width: 768px) {
+    .container {
+      width: 750px;
+    }
+  }
+  /* Medium */
+  @media (min-width: 992px) {
+    .container {
+      width: 970px;
+    }
+  }
+  /* Large */
+  @media (min-width: 1200px) {
+    .container {
+      width: 1170px;
+    }
+  }
+  /* End Global Rules */
+  /* start font  */
+  @font-face {
+    font-family:"Poppins-Bold" ;
+    src: url(assets/fonts/Poppins-Bold.ttf);
+  }
+@font-face {
+    font-family: "Poppins-Regular";
+    src: url(assets/fonts/Poppins-Regular.ttf);
+}
+  /* end font  */
+  /* start app  */
+  .landing{
+    background-color: var(--Off-white);
+  }
+  .landing .container{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+  }
+  .body-app{
+    background-color: var(--White);
+    border-radius: 10px 10px 45px 10px;
+    padding: 15px;
+    width: 600px;
+    max-width: 100%;
+    -webkit-box-shadow: 0 0 10px #ddd;
+    -moz-box-shadow: 0 0 10px #ddd;
+    box-shadow: 0 0 10px #ddd;
+    overflow: hidden;
+  }
+  .body-app .inputs-date{
+    display: flex;
+  }
+  .day{
+    margin: 0 10px;
+    display: flex;
+    flex-direction: column;
+  }
+  .day p{
+    letter-spacing: 3px;
+    font-weight: 500;
+    font-family: "Poppins-Regular";
+    color: var(--Smokey-grey);
+  }
+  .body-app .inputs-date input{
+    font-size: 32px;
+    outline: none;
+    width: 120px;
+    font-weight: 700;
+    border: 1px solid  var(--Light-grey);
+    border-radius: 4px;
+  }
+  .body-app .inputs-date input:focus{
+    color: var(--Purple);
+    border: 1px solid  var(--Purple);
+  }
+  .error{
+    color: red;
+  }
+  .calculte_button{
+    margin:  30px 3px;
+    position: relative;
+  }
+  .calculte_button::before{
+    content: "";
+    position: absolute;
+    width: 100%;
+    height: 3px;
+    background-color: var(--Light-grey);
+    top: 20px;
+    z-index: 1;
+  }
+  .calculte_button button{
+    border-radius: 50%;
+    border: none;
+    outline: none;
+    background-color: var(--Purple);
+    padding: 2px;
+    z-index:2;
+    position: absolute;
+    right: 0;
+  }
+  @media (max-width:650px) {
+    .calculte_button button{
+        right: 190px;
+    }
+  }
+  .result{
+    margin-top: 90px;
+  }
+  .result h1{
+    font-size: 60px;
+    color: var(--Off-black);
+    font-weight: 800;
+    font-family:"Poppins-Bold" ;
+    margin: 0;
+  }
+  .result h1 span{
+    color: var(--Purple);
+    font-weight: 800;
+    
+  }
